@@ -14,7 +14,7 @@ if(isset($_POST['submit'])) {
     WHERE sn = '$user_id'";
 
     if(mysqli_query($conn, $sql)) {
-        echo "Bills Updated";
+        header("Location: ./recent-bills.php");
     } else {
         echo "Bills Update Failed";
     }
