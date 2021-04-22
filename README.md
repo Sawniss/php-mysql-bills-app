@@ -1,14 +1,14 @@
 # Bill Recording App
-PHP, MYSql and Bootstrap App to record and keep track of bills.
+PHP, MYSql and Bootstrap App to record and keep track of bills. See the app in action: https://youtu.be/WVohzzXmbQ4 📺
 
-## Features
+## Features ✨
 - Add bills
 - View recently added bills
 - View bills by month and year
 - Total bills amount by month
 - Edit and delete bills
 
-## How to use
+## How to use? 🔨
 Go to project-folder/includes/connection.php and make sure to update your sever and database details.
 
 If you are using localhost, visit https://localhost/project-name
