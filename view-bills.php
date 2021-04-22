@@ -1,5 +1,5 @@
-
 <?php $title = 'Recently Added'; 
+#view bills
 
 include_once('./includes/header.php'); ?>
 <?php include_once('./includes/connection.php');
