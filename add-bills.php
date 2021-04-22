@@ -26,12 +26,10 @@ if(isset($_POST['submit'])) {
         }
 
         if(empty($_POST['products'])) {
-            $products_result = '<div class="bg-danger mb-5">Date field is required! <br></div>';
+            $products_result = '<div class="bg-danger mb-5">Products field is required! <br></div>';
         } else {
             $products = $_POST['products'];
-            if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $products)){
-                $regx_products_result =  '<div class="bg-danger mb-5">Must be separated with Comma<br></div>';
-            }
+            echo $products;
         }
 
         if(empty($_POST['company'])) {
@@ -46,7 +44,7 @@ if(isset($_POST['submit'])) {
                 $amount = $_POST['amount'];
         }
 
-        if(!empty($date) && !empty($company) && !empty($amount)) {
+        if(!empty($date) && !empty($company) && !empty($products) && !empty($amount)) {
             $sql = "INSERT INTO `bills` (`sn`, `date`, `products`, `company`, `amount`)
             VALUES ('', '$date', '$products', '$company', '$amount');";
             $result = mysqli_query($conn, $sql);
@@ -55,7 +53,7 @@ if(isset($_POST['submit'])) {
             {
                     $inserted_result = '<div class="alert alert-success" role="alert">Record Added Sucessfully!</div>';
             } else {
-                    die();
+                    die($inserted_result = '<div class="alert alert-danger" role="alert">Record Added Sucessfully!</div>');
             }
         }
 }
