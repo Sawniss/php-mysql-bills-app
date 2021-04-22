@@ -8,7 +8,7 @@ $id = $_GET['id'];
 if(isset($_POST['delete'])) {
     $sql = "DELETE FROM bills where sn = '$id'";
     if(mysqli_query($conn, $sql)) {
-        echo "Successfully Deleted";
+        header("Location: ./recent-bills.php");
     } else {
         echo "Error while deleting!";
     }
